@@ -12,6 +12,7 @@ class Book
     private String title;
     private int pages;
     private String refNumber;
+    private int borrowed;
 
     /**
      * Set the author and title fields when this object
@@ -23,6 +24,23 @@ class Book
         title = bookTitle;
         pages = bookPages;
         refNumber="";
+        borrowed=0;
+    }
+    
+    /**
+     * This method sets the current number of times borrowed for a book.
+     */
+    public void setBorrowed()
+    {
+        borrowed+=1;
+    }
+    
+    /**
+     * This method returns the number of times a book has been borrowed.
+     */
+    public int getBorrowed()
+    {
+        return borrowed;
     }
     
     /**
@@ -39,6 +57,10 @@ class Book
             System.out.println("Error, string for refNumber is too short");
         }
     }
+    
+    /**
+     * 
+     */
     
     /**
      * This method returns the reference number.
@@ -103,6 +125,8 @@ class Book
         {
             System.out.print(" Reference Number: "+refNumber);
         }
+        
+        System.out.println(" Number of times borrowed: " + borrowed);
     }
     
 }
