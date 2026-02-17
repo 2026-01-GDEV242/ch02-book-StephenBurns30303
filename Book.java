@@ -11,6 +11,7 @@ class Book
     private String author;
     private String title;
     private int pages;
+    private String refNumber;
 
     /**
      * Set the author and title fields when this object
@@ -21,8 +22,24 @@ class Book
         author = bookAuthor;
         title = bookTitle;
         pages = bookPages;
+        refNumber="";
     }
     
+    /**
+     * This method sets the reference number for a book.
+     */
+    public void setRefNumber(String ref)
+    {
+        refNumber=ref;
+    }
+    
+    /**
+     * This method returns the reference number.
+     */
+    public String getRefNumber()
+    {
+        return refNumber; 
+    }
     
     /**
      * This method returns the number of pages.
