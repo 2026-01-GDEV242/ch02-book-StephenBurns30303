@@ -13,18 +13,28 @@ class Book
     private int pages;
     private String refNumber;
     private int borrowed;
+    private boolean courseText;
 
     /**
      * Set the author and title fields when this object
      * is constructed.
      */
-    public Book(String bookAuthor, String bookTitle, int bookPages)
+    public Book(String bookAuthor, String bookTitle, int bookPages, boolean bookCourseText)
     {
         author = bookAuthor;
         title = bookTitle;
         pages = bookPages;
+        courseText=bookCourseText;
         refNumber="";
         borrowed=0;
+    }
+    
+    /**
+     * This method returns the status of a book if it is a course material or not.
+     */
+    public boolean isCourseText()
+    {
+        return courseText;
     }
     
     /**
