@@ -64,5 +64,12 @@ class Book
         System.out.println("Title:" +title);
     }
 
+    /**
+     * This method prints all the information concerning a certain book.
+     */
+    public void printDetails()
+    {
+        System.out.println("Title: "+title+ " Author: "+author+ " Pages: "+pages);
+    }
     
 }
